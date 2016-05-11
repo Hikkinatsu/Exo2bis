@@ -280,8 +280,8 @@ section .article:nth-child(4N+1) {
     color: white;
     position: absolute;
     padding: .5em .3em;
-    margin-left: 7%;
-    margin-top: -14%
+    margin-left: 12%;
+    margin-top: -21%;
 }
 
 .block-main .article .button:hover {
