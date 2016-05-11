@@ -1,0 +1,369 @@
+@import url(http://fonts.googleapis.com/css?family=Gudea:400,400italic,700|Bangers);
+@import url(normalize.css);
+
+/* --------------------------------------------- */
+/* RESET */
+/* --------------------------------------------- */
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+/* --------------------------------------------- */
+
+/* ---------
+COMMONS
+------- */
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-size: .8em;
+    background: #646464;
+}
+
+a {
+    color: #444;
+    text-decoration: none;
+}
+
+.block-header > .inner,
+.block-nav > .inner,
+.block-center > .inner,
+.block-footer > .inner {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.group:after {
+    clear: both;
+    display: table;
+    content: "";
+}
+
+/* -------------
+HEADER
+-------- */
+
+.block-header {
+    background: white;
+}
+
+.block-header > .inner {
+    padding: 1em 0;
+}
+
+.block-header .title {
+    color: black;
+    font-size: 3em;
+    text-transform: uppercase;
+    font-family: 'Gudea', cursive, sans-serif;
+}
+
+.block-header .title a > img {
+    vertical-align: middle;
+}
+
+.block-header .title a > .my {
+    font-size: .4em;
+}
+
+.block-header .title a > .skate {
+    font-size: 1.4em;
+}
+
+.block-header .title a > .shop {
+    font-family: 'Bangers', cursive, sans-serif;
+    font-size: 1.2em;
+}
+
+/* ----------
+NAVIGATION
+---------- */
+
+.block-nav {
+    background: #2074bc
+}
+
+.block-nav .menu li,
+.block-nav .menu a {
+    display: block;
+}
+
+/* -----------
+NIVEAU 0
+---------- */
+
+.block-nav .menu > li {
+    float: left;
+    border-left: 1px solid #0068BF;
+    position: relative;
+}
+
+.block-nav .menu > li:first-child {
+    border-left: 0;
+}
+
+.block-nav .menu > li > a {
+    color: white;
+    font-family: cursive, inherit, sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 0.6rem 0.6rem;
+}
+
+.block-nav .menu > li:hover > a {
+    background: #1f6198;
+}
+
+/*----------
+NIVEAU 1 
+---------- */
+
+.block-nav .menu > li > ul {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: #FFF;
+    min-width: 100%;
+}
+
+.border-nav .menu > li > ul > li {
+    border-bottom: 1px solid #DDD;
+}
+
+.border-nav .menu > li > ul > li:last-child {
+    border-bottom: 0;
+}
+
+.block-nav .menu > li > ul > li > a {
+    padding: 0.6rem 1.2rem;
+    color: #444;
+    text-transform: uppercase;
+}
+
+.block-nav .menu > li > ul > li:hover {
+    background: #9B9B9B;
+}
+
+.block-nav .menu > li > ul {
+    display: none;
+    z-index: 1;
+}
+
+.block-nav .menu > li:hover > ul {
+    display: block;
+}
+
+/* --------------
+CENTER
+------------ */
+
+.block-center {
+    background: url(../images/bg.png);
+}
+
+/* -----------
+MAIN
+----------- */
+
+.block-main .article .plus {
+    display: none;
+    position: absolute;
+    font-size: 7em;
+    margin-left: 4.8%;
+    margin-top: 2%;
+    opacity: 0.8;
+}
+
+.block-main {
+    margin-top: 20px;
+    float: right;
+    width: 70%;
+}
+
+.block-main .title:first-child {
+    color: #2074bc;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #ff3155;
+}
+
+.section {
+    margin: 0 -20px;
+}
+
+section .article:nth-child(4N+1) {
+    clear: left;
+}
+
+.block-main .article {
+   /* float: left;
+    width: 25%;
+    height: 25%; */
+    margin-top: 20px;
+    float: left;
+    width: 25%;
+    padding: 0 20px 40px;    
+}
+
+
+.block-main .article:hover {
+    border: 1px solid #2074bc;
+    margin-top: 19px;
+    padding: 0 19px 39px;
+    border-radius: 5px;
+}
+
+.block-main .article img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.block-main .article:hover img {
+    opacity: 0.4;
+}
+
+.block-main .article:hover .plus {
+    display: block;
+}
+
+.block-main .article > .title {
+    color: #2074bc;
+    padding-left: .8rem;
+}
+
+.block-main .article .pricetrue {
+    font-size: 1.3rem;
+    padding-left: .8rem;
+}
+
+.block-main .article .pricefalse {
+    font-size: 1rem;
+    text-decoration: line-through;
+    color: #8d8d8d;
+}
+
+.block-main .article .button {
+    display: block;
+    margin: .5em;
+    padding: .5em .8em;
+    background: #2074bc;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 3%;
+}
+
+.block-main .article .promo {
+    background: #ff3155;
+    color: white;
+    position: absolute;
+    padding: .5em .3em;
+    margin-left: 12%;
+    margin-top: -21%
+}
+
+.block-main .article .button:hover {
+    background: #383838;
+}
+
+/*-----------
+ASIDE
+-------- */
+
+.block-aside {
+    float: left;
+    width: 30%;
+    padding: 0 30px 0 0;
+    margin-top: 20px;
+}
+
+.block-aside .title {
+    text-transform: uppercase;
+    font-size: 1.2em;
+    color: #575757;
+    padding: 1rem 1.3rem; 
+    background: #e3e2e2;
+}
+
+.block-aside .aside-nav li a {
+    text-transform: uppercase;
+    color: #b9b9b9;
+}
+
+.block-aside .aside-nav > ul > li {
+    display: block;
+    border-top: 1px solid #B9B9B9;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 8px;
+}
+
+.block-aside .aside-nav > ul > li:hover {
+    background: #2074bc;
+    color: white;
+}
+
+.block-aside .aside-nav > ul > li:hover > a {
+    color: white;
+}
+
+.block-aside .aside-nav > ul > li:first-child {
+    border-top: 0; 
+}
+
+/* ----------
+PAGES
+-------- */
+
+.block-page {
+    background: url(../images/bg.png);
+    padding: 1rem 5rem 2rem 0;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.block-page .button {
+    background: #2074bc;
+    padding: .5rem;
+    margin-left: .3rem;
+    color: white;
+}
+
+.block-page .button:hover {
+    background: #383838
+}
+
+
+
+/* --------
+FOOTER
+-------- */
+
+.block-footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+    margin: 1em;
+}
